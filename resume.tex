@@ -1,0 +1,73 @@
+\expandafter\def\csname ver@fontenc.sty\endcsname{}
+\expandafter\def\csname opt@fontenc.sty\endcsname{T1}
+\PassOptionsToPackage{pdfpagelabels=false,unicode}{hyperref}
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvtheme[blue]{classic}
+\usepackage[utf8]{inputenc}
+\usepackage[top=1.5cm,bottom=1.5cm,left=1.5cm,right=1.5cm,asymmetric]{geometry}
+
+\usepackage[pdfa]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+\renewcommand*{\emailsymbol}{}
+\renewcommand*{\homepagesymbol}{}
+
+\firstname{Timur}
+\familyname{Sazon}
+\email{tim.sazon51@gmail.com}
+\homepage{timsazon.github.io}
+\social[github]{timsazon}
+\social[linkedin]{timsazon}
+
+\nopagenumbers{}
+\begin{document}
+\makecvtitle
+\vspace{-1cm}
+
+\section{Profile}
+\cvline{}{Detail-oriented and highly adaptable specialist with 3+ years of commercial web development expertise.}
+
+\section{Experience}
+\cventry{\footnotesize\\[-.42cm]Oct 2019\\[-.1cm]present}{Software Engineer}{\href{https://sperasoft.com/}{Sperasoft}}{Saint Petersburg}{}{
+\begin{itemize}
+	\item[-] Backend development for a game publishing platform.
+\end{itemize}
+}
+\cventry{\footnotesize\\[-.42cm]Oct 2018\\[-.1cm]Oct 2019}{Full Stack Software Engineer}{\href{https://sperasoft.com/}{Sperasoft}}{Volgograd}{}{
+\begin{itemize}
+	\item[-] High-load distributed client-server web application development, such as network analysis and testing tools for gaming consoles.
+\end{itemize}
+}
+\cventry{\footnotesize\\[-.42cm]Aug 2017\\[-.1cm]Oct 2018}{Software Engineer}{Lecho}{Volgograd}{}{
+\begin{itemize}
+	\item[-] Web application development (mailing, acquiring, etc.) in Java and PHP.
+\end{itemize}
+}
+
+\section{Programming languages}
+\cvline{Comfortable}{Java, Go, JavaScript}
+\cvline{Familiar}{Python, C\#, C++}
+
+\section{Skills}
+\cvline{Spring}{Experienced with the framework, made a couple of contributions to it}
+\cvline{Auth}{Familiar with OAuth 2.0, Token Exchange, Zero Trust Architecture}
+\cvline{Databases}{Familiar with Postgres, MongoDB, Redis and Elasticsearch}
+\cvline{Git}{Experienced with branches, rebasing, conflicts, versioning}
+\cvline{Containers}{Familiar with Docker and Kubernetes}
+
+\section{Languages}
+\cvline{Russian}{Native}
+\cvline{English}{Proficient}
+
+\section{Education}
+\cventry{\footnotesize\\[-.50cm]2015 - 2019}{Computer Science}{Volgograd State University}{Volgograd}{}{}{}
+
+\section{Hobbies}
+\cvlistitem{Riding a bike}{}
+\cvlistitem{Playing flight simulators}{}
+\cvlistitem{Watching Netflix}{}
+\cvlistitem{Learning Go :)}{}
+
+\end{document}
