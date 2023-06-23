@@ -1,7 +1,7 @@
 \expandafter\def\csname ver@fontenc.sty\endcsname{}
 \expandafter\def\csname opt@fontenc.sty\endcsname{T1}
 \PassOptionsToPackage{pdfpagelabels=false,unicode}{hyperref}
-\documentclass[11pt,a4paper,sans]{moderncv}
+\documentclass[10pt,a4paper,sans]{moderncv}
 
 \moderncvtheme[blue]{classic}
 \usepackage[utf8]{inputenc}
@@ -27,10 +27,22 @@
 \vspace{-1cm}
 
 \section{Profile}
-\cvline{}{Detail-oriented and highly adaptable specialist with 3+ years of commercial web development expertise.}
+\cvline{}{Detail-oriented and highly adaptable specialist with 5+ years of commercial web development expertise.}
 
 \section{Experience}
-\cventry{\footnotesize\\[-.42cm]Oct 2019\\[-.1cm]present}{Software Engineer}{\href{https://sperasoft.com/}{Sperasoft}}{Saint Petersburg}{}{
+\cventry{\footnotesize\\[-.42cm]Aug 2021\\[-.1cm]present}{Software Engineer}{\href{https://pandadoc.com/}{PandaDoc}}{Remote (USA)}{}{
+Development of Public API and Automations platform.\\
+Tech stack:
+\begin{itemize}
+	\item[-] Java: Spring MVC;
+	\item[-] Python: Django, asyncio;
+	\item[-] Databases: PostgreSQL, Redis;
+	\item[-] MQ: Kafka;
+	\item[-] Containers: Docker, Kubernetes (Helm, Vault).
+\end{itemize}
+}
+
+\cventry{\footnotesize\\[-.42cm]Oct 2019\\[-.1cm]Aug 2021}{Software Engineer}{\href{https://sperasoft.com/}{Sperasoft}}{Saint Petersburg}{}{
 Backend development for a game publishing platform.\\
 Tech stack:
 \begin{itemize}
@@ -49,16 +61,6 @@ Tech stack:
 	\item[-] JavaScript: React, NodeJS;
 	\item[-] Databases: PostgreSQL, MongoDB, Elasticsearch, Cassandra, DynamoDB;
 	\item[-] MQ: Kafka, Hazelcast;
-	\item[-] Containers: Docker.
-\end{itemize}
-}
-\cventry{\footnotesize\\[-.42cm]Aug 2017\\[-.1cm]Oct 2018}{Software Engineer}{Lecho}{Volgograd}{}{
-Web application development for a local company (mailing, acquiring, CRM, etc.).\\
-Tech stack:
-\begin{itemize}
-	\item[-] Java: Spring MVC/Integration/Activiti;
-	\item[-] Databases: SQL Server, PostgreSQL, Redis;
-	\item[-] MQ: RabbitMQ;
 	\item[-] Containers: Docker.
 \end{itemize}
 }
@@ -82,9 +84,8 @@ Tech stack:
 \cventry{\footnotesize\\[-.50cm]2015 - 2019}{Computer Science}{Volgograd State University}{Volgograd}{}{}{}
 
 \section{Hobbies}
-\cvlistitem{Riding a bike}{}
-\cvlistitem{Playing flight simulators}{}
-\cvlistitem{Watching Netflix}{}
-\cvlistitem{Learning Go :)}{}
+\cvlistitem{Traveling}{}
+\cvlistitem{Riding bikes}{}
+\cvlistitem{Flying helicopters}{}
 
 \end{document}
