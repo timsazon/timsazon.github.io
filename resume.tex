@@ -1,7 +1,7 @@
 \expandafter\def\csname ver@fontenc.sty\endcsname{}
 \expandafter\def\csname opt@fontenc.sty\endcsname{T1}
 \PassOptionsToPackage{pdfpagelabels=false,unicode}{hyperref}
-\documentclass[10pt,a4paper,sans]{moderncv}
+\documentclass[12pt,a4paper,sans]{moderncv}
 
 \moderncvtheme[blue]{classic}
 \usepackage[utf8]{inputenc}
@@ -10,9 +10,6 @@
 \usepackage[pdfa]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-
-\renewcommand*{\emailsymbol}{}
-\renewcommand*{\homepagesymbol}{}
 
 \firstname{Timur}
 \familyname{Sazon}
@@ -26,66 +23,57 @@
 \makecvtitle
 \vspace{-1cm}
 
-\section{Profile}
-\cvline{}{Detail-oriented and highly adaptable specialist with 5+ years of commercial web development expertise.}
-
 \section{Experience}
 \cventry{\footnotesize\\[-.42cm]Aug 2021\\[-.1cm]present}{Software Engineer}{\href{https://pandadoc.com/}{PandaDoc}}{Remote (USA)}{}{
-Development of Public API and Automations platform.\\
-Tech stack:
 \begin{itemize}
-	\item[-] Java: Spring MVC;
-	\item[-] Python: Django, asyncio;
-	\item[-] Databases: PostgreSQL, Redis;
-	\item[-] MQ: Kafka;
-	\item[-] Containers: Docker, Kubernetes (Helm, Vault).
+	\item[-] Working on the Automations platform, where I've designed the technical architecture, developed a new set of microservices, and collaborated with third-party companies on different integration issues
+	\item[-] Owner of several critical microservices related to electronic signature, PDF import/export, etc
+	\item[-] Developing Public API using Java and Python
 \end{itemize}
 }
 
-\cventry{\footnotesize\\[-.42cm]Oct 2019\\[-.1cm]Aug 2021}{Software Engineer}{\href{https://sperasoft.com/}{Sperasoft}}{Saint Petersburg}{}{
-Backend development for a game publishing platform.\\
-Tech stack:
+\cventry{\footnotesize\\[-.42cm]Oct 2019\\[-.1cm]Aug 2021}{Software Engineer}{\href{https://sperasoft.com/}{Sperasoft}}{Saint Petersburg, Russia}{}{
 \begin{itemize}
-	\item[-] Java: Spring MVC/WebFlux;
-	\item[-] Databases: PostgreSQL, Redis;
-	\item[-] MQ: Kafka;
-	\item[-] Containers: Docker, Kubernetes (Helm, Vault), Terraform (AWS).
+	\item[-] Designing and building a game publishing platform from scratch
+	\item[-] Developing OAuth 2.0 Server architecture based on Zero Trust and Token Exchange RFC standards
+	\item[-] Collaborating with game developers to help them release a game on Steam
 \end{itemize}
 }
 
-\cventry{\footnotesize\\[-.42cm]Oct 2018\\[-.1cm]Oct 2019}{Full Stack Software Engineer}{\href{https://sperasoft.com/}{Sperasoft}}{Volgograd}{}{
-High-load network analysis and testing tools for gaming consoles.\\
-Tech stack:
+\cventry{\footnotesize\\[-.42cm]Oct 2018\\[-.1cm]Oct 2019}{Full Stack Software Engineer}{\href{https://sperasoft.com/}{Sperasoft}}{Volgograd, Russia}{}{
 \begin{itemize}
-	\item[-] Java: Spring MVC/WebFlux, JAX-RS;
-	\item[-] JavaScript: React, NodeJS;
-	\item[-] Databases: PostgreSQL, MongoDB, Elasticsearch, Cassandra, DynamoDB;
-	\item[-] MQ: Kafka, Hazelcast;
-	\item[-] Containers: Docker.
+	\item[-] Developing high-load network analysis and testing tools for Sony PlayStation
+	\item[-] Working with low-level TCP/UDP traffic
 \end{itemize}
 }
 
-\section{Programming languages}
-\cvline{Comfortable}{Java}
-\cvline{Familiar}{Go, JavaScript, Python, C\#, C++}
-
-\section{Skills}
-\cvline{Spring}{Experienced with the framework and how it works under the hood}
-\cvline{Auth}{Familiar with OAuth 2.0, Token Exchange, Zero Trust Architecture}
-\cvline{Databases}{Familiar with Postgres, MongoDB, Redis and Elasticsearch}
-\cvline{Git}{Experienced with branches, rebasing, conflicts, versioning}
-\cvline{Containers}{Familiar with Docker and Kubernetes}
-
-\section{Languages}
-\cvline{Russian}{Native}
-\cvline{English}{Proficient}
+\cventry{\footnotesize\\[-.42cm]Sep 2017\\[-.1cm]Oct 2018}{Software Engineer Intern}{Lecho}{Volgograd, Russia}{}{
+\begin{itemize}
+	\item[-] Developing a CRM platform with Activiti BPMN framework and Spring Boot
+\end{itemize}
+}
 
 \section{Education}
-\cventry{\footnotesize\\[-.50cm]2015 - 2019}{Computer Science}{Volgograd State University}{Volgograd}{}{}{}
+\cventry{\footnotesize\\[-.50cm]2015 - 2019}{Computer Science}{Volgograd State University}{Volgograd, Russia}{}{}{}
 
-\section{Hobbies}
-\cvlistitem{Traveling}{}
-\cvlistitem{Riding bikes}{}
-\cvlistitem{Flying helicopters}{}
+\section{Programming languages}
+\cvline{Proficient}{Java}
+\cvline{Intermediate}{Go, Python, JavaScript/TypeScript}
+\cvline{Familiar}{C\#, C++}
+
+\section{Tools}
+\cvline{Spring MVC/Boot}{Experienced with the framework and how it works under the hood, contributed a couple of bug-fixes}
+\cvline{Frontend}{Familiar with React, Angular, Electron}
+\cvline{Auth}{OAuth 2.0, Token Exchange, Zero Trust Architecture, RFC specs}
+\cvline{Databases}{PostgreSQL, Redis, MongoDB, Cassandra, AWS DynamoDB, Elasticsearch}
+\cvline{Cloud}{Docker, Helm, Vault, Kubernetes, Terraform, AWS/GCP}
+\cvline{Git}{Experienced with branches, rebasing, conflicts, etc}
+
+\section{Skills}
+\cvline{Teamwork}{Written software as part of distributed and remote teams}
+\cvline{Languages}{Native in Russian, proficient in English}
+
+\section{Interests}
+\cvline{}{VR/AR tech, FinTech, Aviation}
 
 \end{document}
