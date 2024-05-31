@@ -1,79 +1,195 @@
-\expandafter\def\csname ver@fontenc.sty\endcsname{}
-\expandafter\def\csname opt@fontenc.sty\endcsname{T1}
-\PassOptionsToPackage{pdfpagelabels=false,unicode}{hyperref}
-\documentclass[12pt,a4paper,sans]{moderncv}
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
-\moderncvtheme[blue]{classic}
-\usepackage[utf8]{inputenc}
-\usepackage[top=1.5cm,bottom=1.5cm,left=1.5cm,right=1.5cm,asymmetric]{geometry}
+\documentclass[letterpaper,11pt]{article}
 
-\usepackage[pdfa]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
 
-\firstname{Tim}
-\familyname{Sazon}
-\email{contact@timsazon.dev}
-\homepage{timsazon.dev}
-\social[github]{timsazon}
-\social[linkedin]{timsazon}
 
-\nopagenumbers{}
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{document}
-\makecvtitle
-\vspace{-1cm}
 
+\begin{center}
+    \textbf{\Huge \scshape Timur Sazon} \\ \vspace{1pt}
+    \small Philadelphia, PA $|$ 347-598-3198 $|$ \href{mailto:contact@timsazon.dev}{\underline{contact@timsazon.dev}} $|$ 
+    \href{https://linkedin.com/in/timsazon}{\underline{linkedin.com/in/timsazon}} $|$
+    \href{https://github.com/timsazon}{\underline{github.com/timsazon}}
+\end{center}
+
+
+%-----------EXPERIENCE-----------
 \section{Experience}
-\cventry{\footnotesize\\[-.42cm]Aug 2021\\[-.1cm]Feb 2024}{Software Engineer}{\href{https://pandadoc.com/}{PandaDoc}}{San Francisco, CA (remote)}{}{
-\begin{itemize}
-	\item[-] Working on the Automations platform, where I've designed the technical architecture, developed a new set of microservices, and collaborated with third-party companies on different integration issues
-	\item[-] Owner of several critical microservices related to electronic signature, PDF import/export, etc
-	\item[-] Developing Public API using Java and Python
-\end{itemize}
-}
+  \resumeSubHeadingListStart
 
-\cventry{\footnotesize\\[-.42cm]Oct 2019\\[-.1cm]Aug 2021}{Software Engineer}{\href{https://sperasoft.com/}{Sperasoft}}{}{}{
-\begin{itemize}
-	\item[-] Designing and building a game publishing platform from scratch
-	\item[-] Developing OAuth 2.0 Server architecture based on Zero Trust and Token Exchange RFC standards
-	\item[-] Collaborating with game developers to help them release a game on Steam and integrate it with Twitch
-\end{itemize}
-}
+    \resumeSubheading
+      {Software Engineer}{Aug. 2021 -- Feb. 2024}
+      {PandaDoc}{Remote (United States)}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented a new integration platform and collaborated with partner companies on various topics}
+        \resumeItem{Owned several critical microservices related to electronic signature and PDF processing}
+        \resumeItem{Developed and improved the company's public API}
+      \resumeItemListEnd
 
-\cventry{\footnotesize\\[-.42cm]Oct 2018\\[-.1cm]Oct 2019}{Full Stack Software Engineer}{\href{https://sperasoft.com/}{Sperasoft}}{}{}{
-\begin{itemize}
-	\item[-] Developing high-load network analysis and testing tools for Sony PlayStation
-	\item[-] Working with low-level TCP/UDP traffic
-\end{itemize}
-}
+    \resumeSubheading
+      {Software Engineer}{Oct. 2019 -- Aug. 2021}
+      {Sperasoft (Jagex)}{Saint Petersburg, Russia}
+      \resumeItemListStart
+        \resumeItem{Responsible for system design and implementation of a game publishing platform from scratch}
+        \resumeItem{Designed and implemented system security architecture based on Zero Trust standards}
+        \resumeItem{Assisted video game developers with a game release on Steam and Twitch integration}
+        \resumeItem{Developed various common Java microservice libraries to accelerate development processes in the team}
+        \resumeItem{Contributed to open-source OAuth 2.0 libraries to improve tracing capabilities}
+    \resumeItemListEnd
 
-\cventry{\footnotesize\\[-.42cm]Sep 2017\\[-.1cm]Oct 2018}{Software Engineer}{Lecho (part-time)}{}{}{
-\begin{itemize}
-	\item[-] Developing a CRM platform with Activiti BPMN framework and Spring Boot
-\end{itemize}
-}
+    \resumeSubheading
+      {Full Stack Software Engineer}{Oct. 2018 -- Oct. 2019}
+      {Sperasoft (Sony Interactive Entertainment)}{Volgograd, Russia}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented a configurable dashboard for data monitoring using React, NodeJS, MongoDB, and Elasticsearch}
+        \resumeItem{Developed a system for real time video traffic analysis and detecting playback issues in video streams}
+        \resumeItem{Implemented a monitoring and control network bandwidth system, using a set of microservices in Java and front-end in Bootstrap.js and jQuery}
+      \resumeItemListEnd
 
+    \resumeSubheading
+      {Software Engineer}{Sep. 2017 -- Oct. 2018}
+      {Lecho}{Volgograd, Russia}
+      \resumeItemListStart
+        \resumeItem{Integrated a payment acquiring system and developed a set of microservices for payments}
+        \resumeItem{Developed a CRM platform using Activiti BPMN framework and Spring Boot}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Arma Community Server} $|$ \emph{C++, SQF, C\#}}{}
+          \resumeItemListStart
+            \resumeItem{Designed and implemented a game launcher with mod download and validation features using .NET Core}
+            \resumeItem{Developed game addons using SQF and C++}
+            \resumeItem{Hosted a popular game server and website, configured Anti-DDoS protection, and developed game integration services}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Go, Python, JavaScript/TypeScript, C\#, C++} \\
+     \textbf{Databases}{: Postgres, MySQL, Redis, MongoDB, AWS DynamoDB, Cassandra, Elasticsearch} \\
+     \textbf{Frameworks}{: Spring Boot/MVC, Django, React, NodeJS} \\
+     \textbf{Other}{: Git, Docker, Kubernetes (Google Cloud Platform, Amazon Web Services), Terraform, OAuth 2.0 standards}
+    }}
+ \end{itemize}
+
+
+%-----------EDUCATION-----------
 \section{Education}
-\cventry{\footnotesize\\[-.50cm]2015 - 2019}{Computer Science}{Volgograd State University}{}{}{}{}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Volgograd State University}{Volgograd, Russia}
+      {Computer Science}{Sep. 2015 -- May 2019}
+  \resumeSubHeadingListEnd
 
-\section{Programming languages}
-\cvline{Proficient}{Java}
-\cvline{Intermediate}{Go, Python, JavaScript/TypeScript}
-\cvline{Familiar}{C\#, C++}
 
-\section{Tools}
-\cvline{Spring MVC/Boot}{Experienced with the framework and how it works under the hood, contributed a couple of bug-fixes}
-\cvline{Frontend}{Familiar with React, Angular, Electron}
-\cvline{Auth}{OAuth 2.0, Token Exchange, Zero Trust Architecture, RFC specs}
-\cvline{Databases}{PostgreSQL, Redis, MongoDB, Cassandra, AWS DynamoDB, Elasticsearch}
-\cvline{Cloud}{Docker, Kubernetes, Terraform, Amazon Web Services, Google Cloud Platform}
-\cvline{Git}{Experienced with branches, rebasing, conflicts, etc}
-
-\section{Skills}
-\cvline{Teamwork}{Written software as part of distributed and remote teams}
-\cvline{Languages}{Native in Russian, proficient in English}
-
-\section{Interests}
-\cvline{}{VR/AR tech, FinTech, Aviation}
-
+%-------------------------------------------
 \end{document}
